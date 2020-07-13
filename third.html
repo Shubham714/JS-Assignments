@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Third Assignments</title>
+</head>
+<body>
+    <script>
+        var today = new Date();
+        var date = today.getDate();
+        var month = today.getMonth()+1;
+        var year = today.getFullYear();
+        if (date < 10)
+        {
+            date = '0' + date;
+        }
+        if (month < 10)
+        {
+            month = '0' + month;
+        }
+        document.write("Date Format (mm-dd-yyyy) : " + month + "-" + date + "-" + year + "<br>");
+        document.write("Date Format (dd-mm-yyyy) : " + date + "-" + month + "-" + year + "<br>");
+    </script>
+</body>
+</html>
