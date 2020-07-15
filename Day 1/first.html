@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Day 1 Assignment 1</title>
+</head>
+<body>
+    <h1>Day 1 Assignment 1</h1>
+    <h2>Various Console methods</h2>
+    <p>To get output open console.</p>
+    <script>
+
+        // 1. console.clear() - Used to clear the console.
+        console.clear();
+
+        // 2. console.log() - Mainly used to print the output to the console.
+        console.log("This is console log method");
+
+        // 3. console.err() - Used to log error message to the console, highlighet in red color.
+        console.error("This is console error method");
+
+        // 4. console.warn() - Used to log warning message to the console, highlighet in yellow color.
+        console.warn("This is console warning method");
+
+        // 5. console.time() and console.timeEnd() - used to measure time taken by the function or block of code.
+        console.time("Time taken");
+        console.timeEnd("Time taken");
+
+        // 6. console.table() - used to generate a table inside a console. The input must be an array or an object which will be shown as a table.
+        console.table({name:"LetsUpgrade", rating:"best course"});
+
+        // 7. console.count() - used to count the number of times a function is called.
+        console.count("This is console count method");
+        console.count("This is console count method");
+        console.count("This is console count method");
+
+        // 8. custom console logs
+        console.log("%cThis is custom console log method", 'color:green');
+    </script>
+</body>
+</html>

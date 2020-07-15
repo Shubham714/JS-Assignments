@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Day 1 Assignment 2</title>
+</head>
+<body>
+    <h1>Day 1 Assignment 2</h1>
+    <h2>Difference between var, let and const</h2>
+    <p>To get output open console.</p>
+    <script>
+        // 1 var - is defined using var keyword, variables defined using var keyword have global or local scope.
+        var name = "LetsUpgrade";
+        console.log(name);
+
+        // reassingn name variable
+        name = "India";
+        console.log(name);
+
+        //redeclare name variables
+        var nama = "Javascript";
+        console.log(nama);
+
+
+        // 2 let - is defines using let keyword, variables defined using var keyword have block scope.
+        let age = 30;
+        console.log(age);
+
+        //reassingn age variable
+        age = 25;
+        console.log(age);
+
+        // but we can't redeclare age variable again.
+        //let age = 33;
+
+
+        // 3 const - is not using const keyword, variables defined using var keyword have block scope.
+        const pi = 3.14;
+        console.log(pi);
+        // we can't redeclare pi variable or reassign pi variable
+        // pi = 4.5 or const pi = 4.5
+    </script>
+</body>
+</html>
