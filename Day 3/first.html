@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Day 3 Assignment 1</title>
+</head>
+<body>
+    <h1>Day 3 Assignment 1</h1>
+    <h2>Question</h2>
+    <p>
+        Take a number from a user and write a function which checks whether the number is even or odd. Assign the result to a variable and log that variable in the console.</p>
+    <p>To get output open console.</p>
+    <script>
+        function isOddOrEven(number)
+        {
+            if (number % 2 == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        let number = Number(prompt("Enter number-","0"));
+        let output = isOddOrEven(number);
+        if(output == 1)
+        {
+            console.log(`The number entered is ${number} and number is even`);
+        }
+        else
+        {
+            console.log(`The number entered is ${number} and number is odd`);
+        }
+    </script>
+</body>
+</html>

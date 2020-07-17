@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Day 3 Assignment 3</title>
+</head>
+<body>
+    <h1>Day 3 Assignment 3</h1>
+    <h2>Question</h2>
+    <p>Write a program to take marks as input from the user and grade him accordingly. Use Conditional statements. Also the same code using switch or ternary</p>
+    <p>To get output open console.</p>
+    <script>
+        let marks = Number(prompt("Enter marks-","0"));
+        let grade = marks > 80 ? 'A' : marks >= 40 && marks <= 80 ? 'B' : 'C';
+        switch (grade) 
+        {
+            case 'A':
+                console.log(`Marks are ${marks} and grade is A`);
+                break;
+            case 'B':
+                console.log(`Marks are ${marks} and grade is B`);
+                break;
+            case 'C':
+                console.log(`Marks are ${marks} and grade is C`);
+                break;
+            default:
+                console.log("wrong output");
+                break;
+        }
+    </script>
+</body>
+</html>
