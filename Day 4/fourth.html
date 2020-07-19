@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Day 4 Assignment 4</title>
+    </head>
+    <body>
+        <h1>Day 4 Assignment 4</h1>
+        <h2>Question</h2>
+        <p>Make a Calculator in Javascript which can do operations as Addtion, Subtraction, Multiplication, Division, Square root, Percentage.</p>
+        <p>To get output open console.</p>
+        <script>
+            let addition = (num1, num2) => num1 + num2;
+            let subtraction = (num1, num2) => num1 -num2;
+            let multiplication = (num1, num2) => num1 * num2;
+            let division = (num1, num2) => num1 / num2;
+            let squareRoot = (num) => Math.sqrt(num);
+            let percentage = (num1, num2) => (num1/100)*num2;
+            let num1 = Number(prompt("Enter First Number -"));
+            let num2 = Number(prompt("Enter Second Number -"));
+            let choice = Number(prompt("What operation you want to perform ? \n 1.Addition 2.Subtraction 3.Multiplication 4.Division 5.SquareRoot 6.Percentage"));
+            switch (choice) {
+                case 1:
+                    console.log(`Addition of ${num1} and ${num2} is ${addition(num1, num2)}`);
+                    break;
+                case 2:
+                    console.log(`Subtraction of ${num1} and ${num2} is ${subtraction(num1, num2)}`);
+                    break;
+                case 3:
+                    console.log(`Multiplication of ${num1} and ${num2} is ${multiplication(num1, num2)}`);
+                    break;
+                case 4:
+                    console.log(`Division of ${num1} and ${num2} is ${division(num1, num2)}`);
+                    break;
+                case 5:
+                    console.log(`Squareroot of first number is ${squareRoot(num1)} and Squareroot of second number is ${squareRoot(num2)}`);
+                    break;
+                case 6:
+                    console.log(`The ${num2}% of ${num1} is ${percentage(num1, num2)}`);
+                    break;
+            
+                default:
+                    console.log("Wrong Choice!!!")
+            }
+        </script>
+    </body>
+</html>

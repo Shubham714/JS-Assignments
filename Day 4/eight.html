@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Day 4 Assignment 8</title>
+    </head>
+    <body>
+        <h1>Day 4 Assignment 8</h1>
+        <h2>Question</h2>
+        <p>Replace Function Expressions with arrow functions in the code.</p>
+        <p>To get output open console.</p>
+        <script>
+            let ask = (question, yes, no) =>
+            {
+                if (confirm(question)) yes()
+                else no();
+            }
+            ask(
+                "Do you agree?",
+                function () { alert ("You agreed.");},
+                function() { alert ("You canceled the execution.");}
+            );
+        </script>
+    </body>
+</html>

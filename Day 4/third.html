@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Day 4 Assignment 3</title>
+    </head>
+    <body>
+        <h1>Day 4 Assignment 3</h1>
+        <h2>Question</h2>
+        <p>Imagine you are going out to do some grocery shopping. <br>
+            So you have an array called shoppingList with all the products you want to buy. <br>Now that you are inside of the shop, you have a basket with all the products from your list, but you want to add a few more. <br>
+            Create a new array called shoppingBasket, that will be a copy of the shoppingList array, and add some new products into it.</p>
+        <p>To get output open console.</p>
+        <script>
+            let shoppingList = ['Bread', 'Butter','Milk','Cheese','Oil', 'sugar'];
+            console.log(`shoppingList = ${shoppingList}`);
+            let shoppingBasket = [...shoppingList];
+            shoppingBasket.push('Maggie');
+            shoppingBasket.push('Coconut');
+            shoppingBasket.push('Toothpaste');
+            console.log(`shoppingBasket = ${shoppingBasket}`);
+
+        </script>
+    </body>
+</html>
