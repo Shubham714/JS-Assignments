@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day 5 Assignment 2</title>
+    </head>
+    <body>
+        <h1>Day 5 Assignment 2</h1>
+        <h2>Question</h2>
+        <p>
+            Create a Class User with properties as name, age & email. <br> He can login and logout <br>
+            Create another class Moderator which has all the features of User, plus additional functionality to Add coins and remove coins. <br>
+            Create one more class Admin which has all the features of Moderator plus additional features like add a Course and delete a particular course for a user.
+        </p>
+        <p>To get output open console:</p>
+
+        <script>
+            class User
+            {
+                constructor(name, age, email)
+                {
+                    this.name = name;
+                    this.age = age;
+                    this.email = email;
+                    this.coins = 0;
+                    this.courses = [];
+                }
+
+                login()
+                {
+                    console.log(`${this.name}: has logged in`);
+                }
+
+                logout()
+                {
+                    console.log(`${this.name}: has logged out`);
+                }
+            }
+
+            class Moderator extends User
+            {
+                addCoins(user)
+                {
+                    user.coins++;
+                    console.log(`${user.name}'s coin got increased by 1 and now ${user.name} has ${user.coins} coins`);
+                }
+                removeCoins(user)
+                {
+                    user.coins--;
+                    console.log(`${user.name}'s coin got decreased by 1 and now ${user.name} has ${user.coins} coins`);
+                }
+            }
+
+            class Admin extends Moderator
+            {
+                addCource(user, course)
+                {
+                    user.courses.push(course);
+                    console.log(`Admin has added ${course} course to ${user.name}'s profile`);
+                }
+                deleteCource(user, course)
+                {
+                    user.courses = user.courses.filter((element) => element != course);
+                    console.log(`Now ${user.name} has ${user.courses} courses`);
+                }
+            }
+
+            let user1 = new User('Sam',25,'Sam@gmail.com');
+
+            let user2 = new User('Michael',24,'michael@gmail.com');
+
+            let mod = new Moderator('Kiran',21,'kiran@gmail.com');
+
+            let admin = new Admin('Shivani',23,'shivani@gmail.com');
+
+            user1.login();
+            user2.login();
+
+            mod.login();
+            mod.addCoins(user2);
+            mod.addCoins(user2);
+            mod.addCoins(user2);
+            mod.addCoins(user1);
+            mod.addCoins(user1);
+            mod.removeCoins(user1);
+            mod.removeCoins(user2);
+            mod.logout();
+
+            
+            admin.login();
+            admin.addCource(user1, 'Java');
+            admin.addCource(user1, 'Python');
+            admin.addCource(user1, 'C');
+            admin.addCource(user2, 'R');
+            admin.addCource(user2, 'JavaScript');
+
+            admin.deleteCource(user1, 'Python');
+            admin.deleteCource(user2, 'R');
+            admin.logout();
+
+            user1.logout();
+            user2.logout();
+
+        </script>
+    </body>
+</html>
